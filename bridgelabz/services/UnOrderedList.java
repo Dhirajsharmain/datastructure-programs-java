@@ -21,15 +21,17 @@ import java.util.Scanner;
 
 public class UnOrderedList {
     private static LinkedList<String> list = new LinkedList<String>();
+
     /**
      * This is the main method or starting point of program.
+     *
      * @param args
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
 
         String[] dataArray = fileReader("E:\\BridgeLabs Training\\Java\\Data Structure\\DataStructurePrograms\\src\\Data.txt");
-        for (String temp:dataArray) {
+        for (String temp : dataArray) {
             list.add(temp);
         }
 
@@ -68,6 +70,7 @@ public class UnOrderedList {
 
     /**
      * Method for write the txt file, fetch words from list and write into txt file .
+     *
      * @param list : new word stored list
      * @throws IOException
      */
@@ -87,12 +90,13 @@ public class UnOrderedList {
     /**
      * Method for checking if word is present in the list. if , remove from list else
      * store into the list.
+     *
      * @param word : sring or word queried by user
      */
-    private static void editFile(String word){
-        if(list.contains(word)){
+    private static void editFile(String word) {
+        if (list.contains(word)) {
             list.remove(word);
-        }else {
+        } else {
             list.add(word);
         }
     }
