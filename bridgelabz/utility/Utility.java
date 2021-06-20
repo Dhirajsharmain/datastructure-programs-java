@@ -31,4 +31,23 @@ public class Utility {
         return wordsArray;
     }
 
+    /**
+     * Method for write the txt file, fetch data from list and write into txt file .
+     *
+     * @param list : new word stored list
+     * @throws IOException
+     */
+    public static void fileWriter(LinkedList<String> list, String filePath) throws IOException {
+        String str = "";
+        for (int i = 0; i < list.size(); i++) {
+            str = str.concat(list.get(i)).concat(" ");
+        }
+        FileWriter fileWriter = new FileWriter(filePath);
+        for (int i = 0; i < str.length(); i++) {
+            fileWriter.write(str.charAt(i));
+        }
+        System.out.println("Writing successful");
+        fileWriter.close();
+    }
+
 }
